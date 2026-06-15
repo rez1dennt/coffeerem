@@ -846,19 +846,19 @@ textarea {
 }
 
 .icon-box--automatic {
-  --icon: url("./assets/free-icon-automatic-8101970.png");
+  --icon: url("./assets/free-icon-automatic-8101970.webp");
 }
 
 .icon-box--coffee {
-  --icon: url("./assets/free-icon-coffee-14158306.png");
+  --icon: url("./assets/free-icon-coffee-14158306.webp");
 }
 
 .icon-box--vocational {
-  --icon: url("./assets/free-icon-vocational-12084871.png");
+  --icon: url("./assets/free-icon-vocational-12084871.webp");
 }
 
 .icon-box--built-in {
-  --icon: url("./assets/free-icon-gas-oven-17724062.png");
+  --icon: url("./assets/free-icon-gas-oven-17724062.webp");
 }
 
 .type-card:hover .icon-box::before {
@@ -2250,6 +2250,10 @@ textarea {
   align-items: start;
 }
 
+.legal-layout > * {
+  min-width: 0;
+}
+
 .legal-hero,
 .legal-card,
 .legal-aside {
@@ -2280,6 +2284,7 @@ textarea {
   font-family: "Onest", sans-serif;
   font-size: clamp(34px, 5vw, 58px);
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .legal-hero p {
@@ -2293,6 +2298,13 @@ textarea {
 
 .legal-card {
   padding: clamp(22px, 3vw, 34px);
+  overflow-wrap: anywhere;
+}
+
+.legal-hero,
+.legal-card,
+.legal-aside {
+  min-width: 0;
 }
 
 .legal-card section + section {

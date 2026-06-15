@@ -214,6 +214,33 @@ if (statsBlock) {
   statObserver.observe(statsBlock);
 }
 
+const mapFrame = document.querySelector(".moscow-map");
+const mapIframe = mapFrame?.querySelector("iframe[data-src]");
+if (mapIframe) {
+  const loadMap = () => {
+    if (!mapIframe.dataset.src) return;
+    mapIframe.src = mapIframe.dataset.src;
+    mapIframe.removeAttribute("data-src");
+  };
+
+  if ("IntersectionObserver" in window) {
+    const mapObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          loadMap();
+          mapObserver.disconnect();
+        }
+      },
+      { rootMargin: "240px 0px" }
+    );
+    mapObserver.observe(mapFrame);
+  } else {
+    window.setTimeout(loadMap, 1200);
+  }
+
+  window.setTimeout(loadMap, 1800);
+}
+
 function getDigits(value) {
   return value.replace(/\D/g, "");
 }
