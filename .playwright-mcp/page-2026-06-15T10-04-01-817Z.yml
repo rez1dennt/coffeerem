@@ -1,0 +1,344 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Coffee Master" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+        - img "Coffee Master" [ref=e5]
+      - navigation "Главное меню" [ref=e6]:
+        - link "Стоимость" [ref=e7] [cursor=pointer]:
+          - /url: "#price"
+        - link "Преимущества" [ref=e8] [cursor=pointer]:
+          - /url: "#benefits"
+        - link "Бренды" [ref=e9] [cursor=pointer]:
+          - /url: "#brands"
+        - link "Отзывы" [ref=e10] [cursor=pointer]:
+          - /url: "#reviews"
+        - link "Контакты" [ref=e11] [cursor=pointer]:
+          - /url: "#contacts"
+      - generic [ref=e12]:
+        - link "+7 (499) 719-13-48 Ежедневно с 9:00 до 21:00" [ref=e13] [cursor=pointer]:
+          - /url: tel:+74997191348
+          - text: +7 (499) 719-13-48
+          - generic [ref=e14]: Ежедневно с 9:00 до 21:00
+        - link "Заказать звонок" [ref=e15] [cursor=pointer]:
+          - /url: "#lead"
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "Ремонт кофемашин на дому в Москве" [level=1] [ref=e20]:
+          - text: Ремонт кофемашин
+          - text: на дому в Москве
+        - paragraph [ref=e21]: Устраняем большинство поломок за один визит с гарантией до 24 месяцев
+        - generic "Преимущества" [ref=e22]:
+          - generic [ref=e23]: ✓ Более 10 лет опыта
+          - generic [ref=e24]: ✓ Бесплатный выезд при ремонте
+          - generic [ref=e25]: ✓ Ремонт = диагностика бесплатно
+          - generic [ref=e26]: ✓ Более 95% ремонтов на дому
+          - generic [ref=e27]: ✓ Работаем со всеми брендами
+          - generic [ref=e28]: ✓ Гарантия до 24 месяцев
+        - generic [ref=e29]:
+          - link "Получить скидку 15% Таймер акции внутри" [ref=e30] [cursor=pointer]:
+            - /url: "#lead"
+            - text: Получить скидку 15%
+            - generic [ref=e31]: Таймер акции внутри
+          - link "Оставить заявку Бесплатная консультация" [ref=e32] [cursor=pointer]:
+            - /url: "#lead"
+            - text: Оставить заявку
+            - generic [ref=e33]: Бесплатная консультация
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - strong [ref=e36]:
+              - text: "1"
+              - emphasis [ref=e37]: +
+            - generic [ref=e38]: лет опыта
+          - generic [ref=e39]:
+            - strong [ref=e40]:
+              - text: "12"
+              - emphasis [ref=e41]: "%"
+            - generic [ref=e42]: ремонтов на дому
+          - generic [ref=e43]:
+            - strong [ref=e44]: "3"
+            - generic [ref=e45]: месяца гарантии
+          - generic [ref=e46]:
+            - strong [ref=e47]:
+              - text: "455"
+              - emphasis [ref=e48]: +
+            - generic [ref=e49]: выполненных ремонтов
+      - generic "Визуальная заглушка главной кофемашины" [ref=e50]:
+        - generic [ref=e53]:
+          - strong [ref=e54]: Выезд сегодня
+          - generic [ref=e55]: в день обращения
+    - generic [ref=e57]:
+      - heading "Мы работаем со всеми популярными брендами" [level=2] [ref=e58]
+      - generic "Логотипы брендов кофемашин" [ref=e59]:
+        - generic [ref=e61]:
+          - img "Philips" [ref=e63]
+          - img "DeLonghi" [ref=e65]
+          - img "Saeco" [ref=e67]
+          - img "Jura" [ref=e69]
+          - img "Krups" [ref=e71]
+          - img "Bosch" [ref=e73]
+          - img "Siemens" [ref=e75]
+          - img "Nivona" [ref=e77]
+          - img "Melitta" [ref=e79]
+          - img "Miele" [ref=e81]
+          - img "Bork" [ref=e83]
+          - img "Gaggia" [ref=e85]
+    - generic [ref=e100]:
+      - heading "С какими кофемашинами работаем" [level=2] [ref=e101]
+      - generic [ref=e102]:
+        - article [ref=e103]:
+          - figure [ref=e104]:
+            - img "Автоматическая кофемашина" [ref=e105]
+          - generic [ref=e106]:
+            - heading "Автоматические" [level=3] [ref=e108]
+            - link "Получить консультацию" [ref=e109] [cursor=pointer]:
+              - /url: "#lead"
+        - article [ref=e110]:
+          - figure [ref=e111]:
+            - img "Рожковая кофемашина" [ref=e112]
+          - generic [ref=e113]:
+            - heading "Рожковые" [level=3] [ref=e115]
+            - link "Получить консультацию" [ref=e116] [cursor=pointer]:
+              - /url: "#lead"
+        - article [ref=e117]:
+          - figure [ref=e118]:
+            - img "Профессиональная кофемашина" [ref=e119]
+          - generic [ref=e120]:
+            - heading "Профессиональные" [level=3] [ref=e122]
+            - link "Получить консультацию" [ref=e123] [cursor=pointer]:
+              - /url: "#lead"
+        - article [ref=e124]:
+          - figure [ref=e125]:
+            - img "Встраиваемая кофемашина" [ref=e126]
+          - generic [ref=e127]:
+            - heading "Встраиваемые" [level=3] [ref=e129]
+            - link "Получить консультацию" [ref=e130] [cursor=pointer]:
+              - /url: "#lead"
+    - generic [ref=e132]:
+      - heading "Наши преимущества" [level=2] [ref=e133]
+      - generic [ref=e134]:
+        - article [ref=e135]:
+          - generic [ref=e136]: ⚙
+          - heading "Бесплатный выезд" [level=3] [ref=e137]
+          - paragraph [ref=e138]: Выезд мастера бесплатно при дальнейшем ремонте
+        - article [ref=e139]:
+          - generic [ref=e140]: ▤
+          - heading "Диагностика бесплатно" [level=3] [ref=e141]
+          - paragraph [ref=e142]: Диагностика кофемашины бесплатна при ремонте
+        - article [ref=e143]:
+          - generic [ref=e144]: ⌂
+          - heading "Ремонт на дому" [level=3] [ref=e145]
+          - paragraph [ref=e146]: Более 95% поломок устраняем у вас дома
+        - article [ref=e147]:
+          - generic [ref=e148]: 🛡
+          - heading "Гарантия до 24 месяцев" [level=3] [ref=e149]
+          - paragraph [ref=e150]: Предоставляем гарантию на работы и запчасти
+        - article [ref=e151]:
+          - generic [ref=e152]: ₽
+          - heading "Фиксированная стоимость" [level=3] [ref=e153]
+          - paragraph [ref=e154]: Стоимость ремонта согласовывается заранее
+        - article [ref=e155]:
+          - generic [ref=e156]: ↗
+          - heading "Выезд в день обращения" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Приезжаем в удобное время
+        - article [ref=e159]:
+          - generic [ref=e160]: "10"
+          - heading "Опыт более 10 лет" [level=3] [ref=e161]
+          - paragraph [ref=e162]: Занимаемся ремонтом кофемашин ежедневно
+        - article [ref=e163]:
+          - generic [ref=e164]: ✦
+          - heading "Все бренды" [level=3] [ref=e165]
+          - paragraph [ref=e166]: Ремонтируем популярные марки и модели
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - heading "Сколько стоит ремонт" [level=2] [ref=e170]
+        - tablist "Категории ремонта" [ref=e171]:
+          - button "Мелкая поломка Без разбора" [ref=e172] [cursor=pointer]:
+            - text: Мелкая поломка
+            - generic [ref=e173]: Без разбора
+          - button "Средняя поломка С частичным разбором" [ref=e174] [cursor=pointer]:
+            - text: Средняя поломка
+            - generic [ref=e175]: С частичным разбором
+          - button "Сложная поломка С полным разбором" [ref=e176] [cursor=pointer]:
+            - text: Сложная поломка
+            - generic [ref=e177]: С полным разбором
+        - generic [ref=e178]:
+          - list [ref=e179]:
+            - listitem [ref=e180]:
+              - generic [ref=e181]: Чистка от кофейных масел
+              - strong [ref=e182]: от 400 руб.
+            - listitem [ref=e183]:
+              - generic [ref=e184]: Чистка капучинатора
+              - strong [ref=e185]: от 300 руб.
+            - listitem [ref=e186]:
+              - generic [ref=e187]: Замена датчика пароблока
+              - strong [ref=e188]: от 350 руб.
+            - listitem [ref=e189]:
+              - generic [ref=e190]: Ремонт ТЭНа
+              - strong [ref=e191]: от 450 руб.
+          - generic [ref=e192]:
+            - text: "[ЗАГЛУШКА:"
+            - text: Фото ремонта кофемашины]
+        - paragraph [ref=e193]: Точная стоимость определяется после диагностики и согласовывается до начала ремонта.
+        - link "Получить консультацию" [ref=e194] [cursor=pointer]:
+          - /url: "#lead"
+      - complementary [ref=e195]:
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - generic [ref=e198]: Акция онлайн
+            - heading "Скидка 15% при заявке онлайн" [level=2] [ref=e199]:
+              - text: Скидка 15%
+              - text: при заявке онлайн
+            - paragraph [ref=e200]: Оставьте заявку в течение
+            - generic [ref=e201]:
+              - strong [ref=e202]: "20"
+              - text: ":"
+              - strong [ref=e203]: "00"
+              - generic [ref=e204]: минут секунд
+            - paragraph [ref=e205]: Выезд и диагностика бесплатны при дальнейшем ремонте.
+            - link "Получить скидку" [ref=e206] [cursor=pointer]:
+              - /url: "#lead"
+          - img "Мастер по ремонту кофемашин" [ref=e208]
+    - generic [ref=e210]:
+      - heading "Как мы работаем" [level=2] [ref=e211]
+      - generic [ref=e212]:
+        - article [ref=e213]:
+          - generic [ref=e214]: "01"
+          - heading "Оставляете заявку" [level=3] [ref=e215]
+          - paragraph [ref=e216]: Оставляете заявку на сайте или звоните нам по телефону
+        - article [ref=e217]:
+          - generic [ref=e218]: "02"
+          - heading "Мастер связывается" [level=3] [ref=e219]
+          - paragraph [ref=e220]: Уточняем подробности и договариваемся о времени визита
+        - article [ref=e221]:
+          - generic [ref=e222]: "03"
+          - heading "Диагностика на месте" [level=3] [ref=e223]
+          - paragraph [ref=e224]: Мастер приезжает и проводит бесплатную диагностику
+        - article [ref=e225]:
+          - generic [ref=e226]: "04"
+          - heading "Выполняем ремонт" [level=3] [ref=e227]
+          - paragraph [ref=e228]: Согласуем стоимость и сразу приступаем к ремонту
+        - article [ref=e229]:
+          - generic [ref=e230]: "05"
+          - heading "Выдаем гарантию" [level=3] [ref=e231]
+          - paragraph [ref=e232]: Вы получаете исправную кофемашину и гарантию до 24 месяцев
+    - generic [ref=e234]:
+      - heading "Отзывы наших клиентов" [level=2] [ref=e235]
+      - generic [ref=e236]:
+        - button "Предыдущий отзыв" [ref=e237] [cursor=pointer]: ‹
+        - generic [ref=e238]:
+          - article [ref=e239]:
+            - generic [ref=e240]:
+              - text: "[ЗАГЛУШКА:"
+              - text: Фото клиента]
+            - generic [ref=e241]:
+              - heading "Антон С." [level=3] [ref=e242]
+              - generic [ref=e243]: ★★★★★
+              - generic [ref=e244]: Philips EP2020
+            - paragraph [ref=e245]: Отличный мастер. Кофемашина перестала наливать кофе. Приехал в тот же день, быстро нашел проблему и устранил.
+            - time [ref=e246]: 12.05.2024
+          - article [ref=e247]:
+            - generic [ref=e248]:
+              - text: "[ЗАГЛУШКА:"
+              - text: Фото клиента]
+            - generic [ref=e249]:
+              - heading "Мария К." [level=3] [ref=e250]
+              - generic [ref=e251]: ★★★★★
+              - generic [ref=e252]: DeLonghi Magnifica S
+            - paragraph [ref=e253]: Кофемашина стала плохо взбивать молоко и шуметь. Мастер всё почистил, заменил детали и дал полезные рекомендации.
+            - time [ref=e254]: 03.05.2024
+          - article [ref=e255]:
+            - generic [ref=e256]:
+              - text: "[ЗАГЛУШКА:"
+              - text: Фото клиента]
+            - generic [ref=e257]:
+              - heading "Игорь Л." [level=3] [ref=e258]
+              - generic [ref=e259]: ★★★★★
+              - generic [ref=e260]: Saeco Lirika
+            - paragraph [ref=e261]: Профессиональное дело. Четко, быстро, без навязанных лишних услуг. Цены адекватные, гарантию выдали.
+            - time [ref=e262]: 28.04.2024
+          - article [ref=e263]:
+            - heading "Стали нашим клиентом?" [level=3] [ref=e264]
+            - paragraph [ref=e265]: Оставьте отзыв и получите скидку на следующую диагностику
+            - link "Оставить отзыв" [ref=e266] [cursor=pointer]:
+              - /url: "#lead"
+        - button "Следующий отзыв" [ref=e267] [cursor=pointer]: ›
+    - generic [ref=e269]:
+      - generic [ref=e270]:
+        - heading "Зона выезда" [level=2] [ref=e271]
+        - generic [ref=e273]:
+          - text: "[ЗАГЛУШКА:"
+          - text: Карта Москвы
+          - text: и области]
+      - generic [ref=e274]:
+        - heading "Выезжаем по всей Москве и ближайшему Подмосковью" [level=3] [ref=e275]
+        - paragraph [ref=e276]: "Основные направления: ЦАО, ЗАО, СЗАО, СВАО, ВАО, ЮВАО, ЮАО, ЮЗАО. Выезд за МКАД до 20 км."
+      - generic [ref=e277]:
+        - heading "Получите консультацию и скидку 15%" [level=2] [ref=e278]
+        - generic [ref=e279]:
+          - generic [ref=e280]: Ваше имя
+          - textbox "Ваше имя" [ref=e281]
+        - generic [ref=e282]:
+          - generic [ref=e283]: Телефон
+          - textbox "Телефон" [ref=e284]:
+            - /placeholder: +7 (___) ___-__-__
+        - generic [ref=e285]:
+          - generic [ref=e286]: Комментарий
+          - textbox "Комментарий" [ref=e287]:
+            - /placeholder: Комментарий (необязательно)
+        - button "Оставить заявку" [ref=e288] [cursor=pointer]
+      - generic [ref=e289]:
+        - paragraph [ref=e290]: Или свяжитесь с нами удобным способом
+        - link "☎ +7 (499) 719-13-48 Ежедневно с 9:00 до 21:00" [ref=e291] [cursor=pointer]:
+          - /url: tel:+74997191348
+          - text: ☎
+          - strong [ref=e292]: +7 (499) 719-13-48
+          - generic [ref=e293]: Ежедневно с 9:00 до 21:00
+        - link "✈ Telegram @coffeemaster_remont" [ref=e294] [cursor=pointer]:
+          - /url: "#"
+          - text: ✈
+          - strong [ref=e295]: Telegram
+          - generic [ref=e296]: "@coffeemaster_remont"
+        - link "☘ WhatsApp Написать в WhatsApp" [ref=e297] [cursor=pointer]:
+          - /url: "#"
+          - text: ☘
+          - strong [ref=e298]: WhatsApp
+          - generic [ref=e299]: Написать в WhatsApp
+  - contentinfo [ref=e300]:
+    - generic [ref=e301]:
+      - link "Coffee Master" [ref=e302] [cursor=pointer]:
+        - /url: "#top"
+        - img [ref=e304]
+        - generic [ref=e306]:
+          - strong [ref=e307]: Coffee Master
+          - generic [ref=e308]: Ремонт кофемашин
+      - navigation [ref=e309]:
+        - link "Стоимость" [ref=e310] [cursor=pointer]:
+          - /url: "#price"
+        - link "Преимущества" [ref=e311] [cursor=pointer]:
+          - /url: "#benefits"
+        - link "Бренды" [ref=e312] [cursor=pointer]:
+          - /url: "#brands"
+        - link "Отзывы" [ref=e313] [cursor=pointer]:
+          - /url: "#reviews"
+        - link "Контакты" [ref=e314] [cursor=pointer]:
+          - /url: "#contacts"
+      - generic [ref=e315]:
+        - link "+7 (499) 719-13-48" [ref=e316] [cursor=pointer]:
+          - /url: tel:+74997191348
+        - text: Ежедневно с 9:00 до 21:00
+      - generic [ref=e317]:
+        - link "Telegram" [ref=e318] [cursor=pointer]:
+          - /url: "#"
+          - text: ✈
+        - link "WhatsApp" [ref=e319] [cursor=pointer]:
+          - /url: "#"
+          - text: ☘
+        - link "VK" [ref=e320] [cursor=pointer]:
+          - /url: "#"
+          - text: vk
+    - generic [ref=e321]:
+      - link "Политика конфиденциальности" [ref=e322] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e323]: © 2026 Coffee Master
