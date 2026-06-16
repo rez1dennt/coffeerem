@@ -8,6 +8,9 @@
   --line-strong: #dfc5af;
   --orange: #e85b0c;
   --orange-dark: #c94706;
+  --cta: #d87835;
+  --cta-dark: #b95a24;
+  --cta-gold: #efad4b;
   --coffee: #7a421e;
   --cream: #f7eadb;
   --yellow: #ffcf6a;
@@ -229,13 +232,13 @@ textarea {
 
 .btn--primary {
   color: #fff;
-  background: linear-gradient(180deg, #f1781e, var(--orange));
-  box-shadow: 0 13px 26px rgba(232, 91, 12, 0.24);
+  background: linear-gradient(180deg, var(--cta-gold), var(--cta) 46%, var(--cta-dark));
+  box-shadow: 0 13px 26px rgba(185, 90, 36, 0.24);
 }
 
 .btn--primary:hover {
-  background: linear-gradient(180deg, #fa812a, var(--orange-dark));
-  box-shadow: 0 16px 34px rgba(232, 91, 12, 0.32);
+  background: linear-gradient(180deg, #f2b85d, #dc813c 46%, #a94d1f);
+  box-shadow: 0 16px 34px rgba(185, 90, 36, 0.32);
 }
 
 .btn--ghost {
@@ -664,6 +667,88 @@ textarea {
   font-size: 12px;
   line-height: 1.15;
   font-weight: 900;
+}
+
+.hero-brand-strip {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hero-brand-card {
+  min-width: 0;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(232, 198, 172, 0.86);
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(57, 34, 20, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.hero-brand-card strong {
+  display: block;
+  margin-top: 7px;
+  color: #2c1b14;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.hero-brand-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 78%, rgba(185, 90, 36, 0.1), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 241, 227, 0.66)),
+    repeating-linear-gradient(135deg, rgba(122, 66, 30, 0.08) 0 1px, transparent 1px 9px);
+  border: 1px dashed rgba(185, 90, 36, 0.35);
+  border-radius: 7px;
+}
+
+.hero-brand-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, rgba(43, 27, 20, 0.08));
+}
+
+.hero-brand-photo span {
+  position: relative;
+  z-index: 1;
+  color: #6c564a;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hero-brand-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 10px 16px rgba(43, 27, 20, 0.16));
+}
+
+.hero-brand-photo--jura {
+  border-color: rgba(122, 66, 30, 0.42);
+}
+
+.hero-brand-photo--delonghi {
+  border-color: rgba(32, 86, 116, 0.28);
+}
+
+.hero-brand-photo--saeco {
+  border-color: rgba(104, 126, 82, 0.34);
 }
 
 .beans {
@@ -1301,9 +1386,9 @@ textarea {
   padding: 26px 24px;
   color: #fff;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 15% 95%, rgba(255, 207, 106, 0.32), transparent 35%),
-    linear-gradient(180deg, #f77a16, #df5408);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 15% 95%, rgba(246, 190, 103, 0.34), transparent 35%),
+    linear-gradient(180deg, #df8b43, #c0642e 58%, #a94d1f);
 }
 
 .promo-card__content::after {
@@ -2192,8 +2277,8 @@ textarea {
   padding: 34px 28px;
   color: #fff;
   background:
-    radial-gradient(circle at 0 100%, rgba(255, 207, 106, 0.26), transparent 36%),
-    linear-gradient(180deg, #ef7017, #cf4804);
+    radial-gradient(circle at 0 100%, rgba(246, 190, 103, 0.27), transparent 36%),
+    linear-gradient(180deg, #dc843e, #bd5c28 58%, #9f461d);
 }
 
 .modal__eyebrow {
@@ -2859,6 +2944,13 @@ textarea {
     object-position: 58% center;
   }
 
+  .hero-brand-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-position: center;
+  }
+
   .machine-card {
     height: 270px;
     transform: none;
@@ -2887,6 +2979,27 @@ textarea {
     bottom: 16px;
     transform: none;
     animation: none;
+  }
+
+  .hero-brand-strip {
+    left: 12px;
+    right: 12px;
+    bottom: 104px;
+    gap: 7px;
+  }
+
+  .hero-brand-card {
+    padding: 6px;
+    border-radius: 9px;
+  }
+
+  .hero-brand-card strong {
+    margin-top: 6px;
+    font-size: 11px;
+  }
+
+  .hero-brand-photo span {
+    font-size: 10px;
   }
 
   .visit-badge__icon {
