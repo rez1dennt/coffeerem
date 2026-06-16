@@ -2752,6 +2752,13 @@ textarea {
     z-index: 52;
   }
 
+  .menu-open .menu-toggle {
+    position: fixed;
+    top: 13px;
+    right: 16px;
+    z-index: 60;
+  }
+
   .menu-open .menu-toggle span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
@@ -2870,6 +2877,10 @@ textarea {
 
   .nav {
     padding-top: 96px;
+  }
+
+  .menu-open .menu-toggle {
+    right: 12px;
   }
 
   .nav a {
