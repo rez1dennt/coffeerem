@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Onest:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260616-map-clean">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -73,12 +73,12 @@
             </div>
             <div class="stats__card">
             
-              <strong><span class="stat-number" data-count="24">24</span></strong>
-              <span>месяца гарантии</span>
+              <strong><small class="stat-prefix">до</small><span class="stat-number" data-count="24">24</span><em class="stat-unit">месяцев</em></strong>
+              <span>гарантия</span>
             </div>
             <div class="stats__card">
            
-              <strong><span class="stat-number" data-count="5000">5000</span><em>+</em></strong>
+              <strong><span class="stat-number" data-count="6400">6400</span><em>+</em></strong>
               <span>выполненных ремонтов</span>
             </div>
           </div>
@@ -107,30 +107,30 @@
         <div class="brand-marquee" aria-label="Логотипы брендов кофемашин">
           <div class="brand-marquee__track">
             <div class="brand-marquee__group">
-              <div class="brand-logo"><img src="./assets/philips.ru logo5.webp" alt="Philips"></div>
               <div class="brand-logo"><img src="./assets/De’Longhi.svg" alt="DeLonghi"></div>
               <div class="brand-logo"><img src="./assets/Saeco-logo-neu.webp" alt="Saeco"></div>
               <div class="brand-logo"><img src="./assets/Jura_Logo.svg" alt="Jura"></div>
+              <div class="brand-logo"><img src="./assets/miele-logo-png_seeklogo-92498.webp" alt="Miele"></div>
+              <div class="brand-logo"><img src="./assets/nivona-logo-png_seeklogo-320624.webp" alt="Nivona"></div>
+              <div class="brand-logo"><img src="./assets/philips.ru logo5.webp" alt="Philips"></div>
               <div class="brand-logo"><img src="./assets/Krups_Logo.svg" alt="Krups"></div>
               <div class="brand-logo"><img src="./assets/Bosch-logo.svg" alt="Bosch"></div>
               <div class="brand-logo"><img src="./assets/Siemens_AG_logo.svg" alt="Siemens"></div>
-              <div class="brand-logo"><img src="./assets/nivona-logo-png_seeklogo-320624.webp" alt="Nivona"></div>
               <div class="brand-logo"><img src="./assets/Logo_Melitta_(Unternehmen).svg" alt="Melitta"></div>
-              <div class="brand-logo"><img src="./assets/miele-logo-png_seeklogo-92498.webp" alt="Miele"></div>
               <div class="brand-logo"><img src="./assets/BORK_logo_orig.webp" alt="Bork"></div>
               <div class="brand-logo"><img src="./assets/Logo_of_Gaggia.svg" alt="Gaggia"></div>
             </div>
             <div class="brand-marquee__group" aria-hidden="true">
-              <div class="brand-logo"><img src="./assets/philips.ru logo5.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/De’Longhi.svg" alt=""></div>
               <div class="brand-logo"><img src="./assets/Saeco-logo-neu.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/Jura_Logo.svg" alt=""></div>
+              <div class="brand-logo"><img src="./assets/miele-logo-png_seeklogo-92498.webp" alt=""></div>
+              <div class="brand-logo"><img src="./assets/nivona-logo-png_seeklogo-320624.webp" alt=""></div>
+              <div class="brand-logo"><img src="./assets/philips.ru logo5.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/Krups_Logo.svg" alt=""></div>
               <div class="brand-logo"><img src="./assets/Bosch-logo.svg" alt=""></div>
               <div class="brand-logo"><img src="./assets/Siemens_AG_logo.svg" alt=""></div>
-              <div class="brand-logo"><img src="./assets/nivona-logo-png_seeklogo-320624.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/Logo_Melitta_(Unternehmen).svg" alt=""></div>
-              <div class="brand-logo"><img src="./assets/miele-logo-png_seeklogo-92498.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/BORK_logo_orig.webp" alt=""></div>
               <div class="brand-logo"><img src="./assets/Logo_of_Gaggia.svg" alt=""></div>
             </div>
@@ -424,6 +424,10 @@
               data-src="https://yandex.ru/map-widget/v1/?ll=37.617700%2C55.755864&amp;z=9&amp;pt=37.617700%2C55.755864%2Cpm2rdm"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-zone" aria-hidden="true">
+              <span class="map-zone__circle"></span>
+              <span class="map-zone__label map-zone__label--outer">до 20 км</span>
+            </div>
             <div class="map-card__badge">Москва + до 20 км за МКАД</div>
           </div>
         </div>

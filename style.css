@@ -371,16 +371,16 @@ textarea {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  max-width: 570px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 520px;
 }
 
 .stats__card {
   position: relative;
   overflow: hidden;
-  min-height: 96px;
-  padding: 18px 14px 14px;
+  min-height: 116px;
+  padding: 21px 18px 17px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 249, 243, 0.9)),
     radial-gradient(circle at 12% 0, rgba(255, 207, 106, 0.14), transparent 42%);
@@ -435,21 +435,43 @@ textarea {
 .stats strong {
   position: relative;
   z-index: 1;
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
   font-family: "Onest", sans-serif;
-  font-size: 31px;
+  font-size: clamp(34px, 3.2vw, 42px);
   line-height: 1;
   color: #24140f;
+  white-space: nowrap;
+}
+
+.stat-prefix {
+  color: var(--orange);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.46em;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.stats strong .stat-unit {
+  color: #4c403a;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.42em;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: lowercase;
 }
 
 .stats__card > span {
   position: relative;
   z-index: 1;
   display: block;
-  margin-top: 7px;
-  font-size: 12px;
+  margin-top: 9px;
+  font-size: 14px;
+  line-height: 1.28;
   color: #4c403a;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .stats strong em {
@@ -1063,15 +1085,15 @@ textarea {
 
 .benefit-row h3 {
   margin: 0 0 7px;
-  font-size: 13px;
+  font-size: clamp(15px, 1.08vw, 16px);
   line-height: 1.25;
 }
 
 .benefit-row p {
   margin: 0;
   color: #5d4e46;
-  font-size: 12px;
-  line-height: 1.42;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .price-section {
@@ -1447,13 +1469,15 @@ textarea {
 
 .step h3 {
   margin: 0 0 7px;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.24;
 }
 
 .step p {
   margin: 0;
   color: #5d4e46;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.42;
 }
 
 .reviews {
@@ -1628,13 +1652,61 @@ textarea {
   display: block;
   border: 0;
   filter: saturate(0.88) contrast(0.96);
+  pointer-events: none;
+}
+
+.map-zone {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.map-zone__circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(76%, 292px);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle, rgba(47, 159, 232, 0.08) 0 11%, transparent 12%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 0 48%, rgba(35, 58, 54, 0.08) 49% 50%, rgba(255, 126, 31, 0.08) 51% 100%);
+  border: 4px solid rgba(24, 73, 68, 0.94);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 999px rgba(255, 126, 31, 0.015),
+    0 0 0 1px rgba(255, 255, 255, 0.72),
+    0 12px 34px rgba(24, 73, 68, 0.16);
+  transform: translate(-50%, -50%);
+}
+
+.map-zone__label {
+  position: absolute;
+  z-index: 2;
+  padding: 6px 9px;
+  color: #2f2119;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(35, 58, 54, 0.12);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.map-zone__label--outer {
+  right: 16%;
+  top: 19%;
+  color: #fff;
+  background: rgba(35, 58, 54, 0.84);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .map-card__badge {
   position: absolute;
   left: 14px;
   bottom: 14px;
-  z-index: 1;
+  z-index: 2;
   padding: 8px 11px;
   color: #fff;
   background: rgba(43, 27, 20, 0.72);
@@ -2763,6 +2835,19 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .stats__card:nth-child(3) strong {
+    gap: 4px;
+    font-size: 32px;
+  }
+
+  .stats__card:nth-child(3) .stat-prefix {
+    font-size: 0.42em;
+  }
+
+  .stats__card:nth-child(3) .stat-unit {
+    font-size: 0.38em;
+  }
+
   .hero__visual {
     min-height: 292px;
     border-radius: 16px;
@@ -2881,8 +2966,24 @@ textarea {
     border-bottom: 1px solid rgba(226, 202, 181, 0.78);
   }
 
+  .benefit-row h3 {
+    font-size: 16px;
+  }
+
+  .benefit-row p {
+    font-size: 15px;
+  }
+
   .benefit-row article:last-child {
     border-bottom: 1px solid rgba(226, 202, 181, 0.78);
+  }
+
+  .step h3 {
+    font-size: 17px;
+  }
+
+  .step p {
+    font-size: 15px;
   }
 
   .tabs {
