@@ -2934,14 +2934,25 @@ textarea {
   }
 
   .hero__visual {
+    display: block;
+    min-height: 0;
     min-height: 292px;
     border-radius: 16px;
     margin-bottom: 20px;
+    overflow: visible;
   }
 
-  .hero__visual img {
+  .hero__visual > img {
+    height: 292px;
     min-height: 292px;
+    border-radius: 16px;
     object-position: 58% center;
+  }
+
+  .hero__visual::before {
+    inset: 0 0 auto;
+    height: 292px;
+    border-radius: 16px;
   }
 
   .hero-brand-photo img {
@@ -2975,27 +2986,34 @@ textarea {
     gap: 10px;
     padding: 12px;
     right: 12px;
-    top: auto;
-    bottom: 16px;
+    top: 202px;
+    bottom: auto;
     transform: none;
     animation: none;
   }
 
   .hero-brand-strip {
-    left: 12px;
-    right: 12px;
-    bottom: 104px;
-    gap: 7px;
+    position: static;
+    margin-top: 12px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .hero-brand-card {
-    padding: 6px;
+    display: block;
+    padding: 7px;
     border-radius: 9px;
   }
 
   .hero-brand-card strong {
-    margin-top: 6px;
-    font-size: 11px;
+    margin-top: 7px;
+    font-size: 13px;
+  }
+
+  .hero-brand-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
   }
 
   .hero-brand-photo span {
