@@ -132,9 +132,25 @@ document.querySelectorAll(".tab").forEach((tab) => {
 function scrollTrack(trackSelector, direction) {
   const track = document.querySelector(trackSelector);
   if (!track) return;
-  const firstItem = track.firstElementChild;
-  const amount = firstItem ? firstItem.getBoundingClientRect().width + 16 : 240;
-  track.scrollBy({ left: direction * amount, behavior: "smooth" });
+  const items = [...track.children];
+  if (!items.length) return;
+
+  const firstItem = items[0];
+  const secondItem = items[1];
+  const itemWidth = firstItem.getBoundingClientRect().width;
+  const gap = secondItem ? Math.max(0, secondItem.offsetLeft - firstItem.offsetLeft - firstItem.offsetWidth) : 0;
+  const itemStep = itemWidth + gap;
+  const visibleCount = Math.max(1, Math.round((track.clientWidth + gap) / itemStep));
+  const maxIndex = Math.max(0, items.length - visibleCount);
+
+  const currentIndex = items.reduce((closestIndex, item, index) => {
+    const closestDistance = Math.abs(items[closestIndex].offsetLeft - track.scrollLeft);
+    const itemDistance = Math.abs(item.offsetLeft - track.scrollLeft);
+    return itemDistance < closestDistance ? index : closestIndex;
+  }, 0);
+
+  const targetIndex = Math.min(maxIndex, Math.max(0, currentIndex + direction));
+  track.scrollTo({ left: items[targetIndex].offsetLeft, behavior: "smooth" });
 }
 
 document.querySelector(".review-prev")?.addEventListener("click", () => scrollTrack(".review-track", -1));
