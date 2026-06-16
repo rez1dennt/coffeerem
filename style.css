@@ -376,11 +376,15 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
   max-width: 520px;
 }
 
 .stats__card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   min-height: 116px;
   padding: 21px 18px 17px;
@@ -423,8 +427,7 @@ textarea {
   box-shadow: 0 18px 40px rgba(57, 34, 20, 0.13);
 }
 
-.stats__card:hover::before,
-.stats__card--accent::before {
+.stats__card:hover::before {
   transform: scaleX(1);
 }
 
@@ -453,8 +456,8 @@ textarea {
   font-family: "Manrope", sans-serif;
   font-size: 0.46em;
   font-weight: 900;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .stats strong .stat-unit {
@@ -1365,7 +1368,7 @@ textarea {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 1.16fr) minmax(205px, 0.84fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(260px, 1.05fr);
   overflow: hidden;
   height: clamp(410px, 30vw, 430px);
   min-height: 410px;
@@ -1467,43 +1470,42 @@ textarea {
   border: 0;
   border-left: 1px solid rgba(232, 198, 172, 0.9);
   border-radius: 0;
-  background:
-    radial-gradient(circle at 54% 26%, rgba(255, 255, 255, 0.95) 0 18%, transparent 19%),
-    radial-gradient(circle at 50% 42%, rgba(247, 218, 194, 0.62), transparent 36%),
-    linear-gradient(180deg, #fffaf4 0%, #f6e6d6 100%);
+  background: #f6e6d6;
 }
 
 .promo-master::before {
   content: "";
   position: absolute;
-  inset: 18px 16px 12px;
-  border: 1px solid rgba(220, 173, 140, 0.38);
-  border-radius: 50%;
-  opacity: 0.8;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(80, 32, 9, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.08), rgba(58, 31, 17, 0.18));
 }
 
 .promo-master::after {
   content: "";
   position: absolute;
-  left: 12%;
-  right: 8%;
-  bottom: -18%;
-  height: 46%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(214, 123, 54, 0.22), transparent 68%);
-  filter: blur(2px);
+  inset: 10px;
+  z-index: 3;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(173, 103, 55, 0.12);
 }
 
 .promo-master img {
   position: absolute;
   z-index: 1;
-  right: -2%;
-  bottom: 0;
-  width: auto;
-  max-width: 108%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 22px 34px rgba(65, 35, 18, 0.18));
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: 45% center;
+  filter: saturate(1.02) contrast(1.02);
 }
 
 .workflow {
@@ -1749,8 +1751,8 @@ textarea {
 
 .map-zone__circle {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 46%;
+  top: 66%;
   width: min(76%, 292px);
   aspect-ratio: 1;
   background:
@@ -1780,8 +1782,10 @@ textarea {
 }
 
 .map-zone__label--outer {
-  right: 16%;
-  top: 19%;
+  left: 26%;
+  right: auto;
+  top: auto;
+  bottom: 14%;
   color: #fff;
   background: rgba(35, 58, 54, 0.84);
   border-color: rgba(255, 255, 255, 0.25);
@@ -3170,14 +3174,12 @@ textarea {
   }
 
   .promo-master::before {
-    inset: 22px 54px;
+    inset: 0;
   }
 
   .promo-master img {
-    right: 50%;
-    transform: translateX(50%);
-    max-height: 255px;
-    max-width: 76%;
+    transform: none;
+    object-position: 42% center;
   }
 
   .review-track {
